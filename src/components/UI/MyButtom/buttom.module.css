@@ -1,0 +1,57 @@
+.knopgreen{
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  max-width:200px;
+  height:40px;
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow:  0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.knopgreen:hover {  background: rgb(53, 167, 110); }
+.knopgreen:active {
+background: rgb(33,147,90);
+box-shadow: 0 3px rgb(33,147,90) inset;
+}
+.knopblack{
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  max-width:200px;
+  height:40px;
+  border-radius: 3px;
+  background: rgb(30, 30, 30);
+  box-shadow: 0 -3px rgb(30, 30, 30) inset;
+  transition: 0.2s;
+  cursor: pointer;
+  color:white;
+}
+.knopblack:hover { background: rgb(46, 46, 46); }
+.knopblack:active {
+  background: rgb(46, 46, 46);
+  box-shadow: 0 3px rgb(36, 36, 36) inset;
+}
+.knoplight{
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    max-width:200px;
+    height:40px;
+    border-radius: 3px;
+    background: rgb(199, 199, 199);
+    box-shadow: 0 -3px rgb(161, 161, 161) inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.knoplight:hover { background: rgb(161, 161, 161); }
+.knoplight:active {
+  background: rgb(90, 90, 90);
+  box-shadow: 0 3px rgb(161, 161, 161) inset;
+}

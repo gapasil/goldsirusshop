@@ -1,0 +1,31 @@
+.container{
+    padding-top: 50px;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    padding-bottom: 20px;
+}
+.blocksvaz{
+    text-align: center;
+}
+.blocksvaz textarea{
+    width: 500px;
+    height:200px;
+    border: 2px solid grey;
+    border-radius: 1px;
+    outline: none;
+}
+.viborka{
+    display: flex;
+    justify-content: space-around;
+}
+.block{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+}
+.block select{
+    outline: none;
+}
