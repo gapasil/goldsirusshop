@@ -196,7 +196,10 @@ const Title = () => {
         <div className="lentdel" ref={komref}>
             <h2>Отзывы</h2>
           </div>
-          <p>Отзыв о нашем магазине вы можете оставить после 1 покупки</p>
+          <div style={{"textAlign":"center"}}>
+            <p>Отзыв о нашем магазине вы можете оставить после 1 покупки</p>
+          </div>
+          
           <div className="contotziv">           
             <div className="contentotziv">
               <p>papuas</p>
