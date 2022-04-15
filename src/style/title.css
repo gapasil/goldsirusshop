@@ -733,6 +733,9 @@ footer p {
         margin-left: 0px;
         margin-right: 22px;
     }
+    .container{
+        width: 1000px;
+    }
 }
 @media screen and (max-width:900px){
     *{
@@ -749,6 +752,9 @@ footer p {
     }
     #golddd{
         font-size:35px
+    }
+    .container{
+        width: 900px;
     }
 }
 @media screen and (max-width:866px){
@@ -778,6 +784,9 @@ footer p {
     #golddd{
         font-size:30px
     }
+    .container{
+        width: 866px;
+    }
 }
 @media screen and (max-width:750px){
     .container_korzina_content{
@@ -785,6 +794,9 @@ footer p {
     }
     .svaz{
         right: 10%;
+    }
+    .container{
+        width: 750px;
     }
 }
 @media screen and (max-width:662px) {
@@ -800,6 +812,9 @@ footer p {
     }
     .contotziv{
         width: 100%;
+    }
+    .container{
+        width: 662px;
     }
 }
 @media screen and (max-width:421px) {
@@ -821,5 +836,8 @@ footer p {
     }
     .krestik{
         margin-right: 0px;
+    }
+    .container{
+        width: 421px;
     }
 }
