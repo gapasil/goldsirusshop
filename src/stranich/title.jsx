@@ -47,14 +47,34 @@ const Title = () => {
   const infref = useRef(null)
   const komref = useRef(null)
   const logoref = useRef(null)
-  const [valueKorzina,setValueKroz] = useState(localStorage.length)
+  let koltov = 0
+  for(let key in localStorage){
+    if (!localStorage.hasOwnProperty(key)) {
+      continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
+    }
+    if(key=="theme"){
+      continue
+    }
+    koltov += 1
+  }
+  const [valueKorzina,setValueKroz] = useState(koltov)
   const [,settt] = useState('')
   const [masreg,setMasreg] = useState([
     ["Добавить в корзину","Воронка пустоты",voronkawhite,"voronka"],
     ["Добавить в корзину","Песчинка потерянного времени",peshwhite,"pesh"],
     ["Добавить в корзину","Древнейший саронит",saronitwhite,"saronit"]
   ])
-
+  let proverktovar = () =>{
+    for(let key in localStorage){
+    if (!localStorage.hasOwnProperty(key)) {
+      continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
+    }
+    if(key=="theme"){
+      continue
+    }
+    koltov += 1
+  }
+  }
   const switchTheme = () => {
     if(theme == "light"){
       localStorage.setItem("theme","dark")
@@ -77,11 +97,13 @@ const Title = () => {
   const callbackcolgold = (value,rezim,rub) =>{ 
     dispatch({type:`x${rezim}`,payload:rub})
     localStorage.setItem(`x${rezim}`,value)
-    setValueKroz(localStorage.length)
+    proverktovar()
+    setValueKroz(koltov)
   }
   const callbackcolreg = (props,value) =>{
-    localStorage.setItem(props,value)   
-    setValueKroz(localStorage.length)
+    localStorage.setItem(props,value)
+    proverktovar()
+    setValueKroz(koltov)
   }
   const deleted = (index) =>{
     masreg[index].splice(0,1,false)
@@ -89,7 +111,8 @@ const Title = () => {
     settt(Math.random())
   }
   const korzObnov = () =>{
-    setValueKroz(localStorage.length)
+    proverktovar()
+    setValueKroz(koltov)
   }
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -111,7 +134,7 @@ const Title = () => {
             <button onClick={()=>infref.current.scrollIntoView({behavior: "smooth",block:"start"})}className="knopheader">Информация</button>
             <button onClick={()=>komref.current.scrollIntoView({behavior: "smooth",block:"start"})}className="knopheader">Отзывы</button>
             <button onClick={()=>infref.current.scrollIntoView({behavior: "smooth",block:"start"})}className="knopheader">Гарантий</button>
-            <Link to="/oplat" id="linkimgkartinka"><p>{valueKorzina-1}</p><img src={img[6]} height="40px"/></Link>
+            <Link to="/oplat" id="linkimgkartinka"><p>{valueKorzina}</p><img src={img[6]} height="40px"/></Link>
           </div>
           <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />

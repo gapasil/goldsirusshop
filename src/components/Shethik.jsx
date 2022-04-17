@@ -38,7 +38,8 @@ export const Shethik = ({props,callback,shethikk,kol,prop}) => {
       <input
       type="number"
       value={value}
-      onChange={(e)=>setValue(e.target.value++)}
+      onChange={(e)=>{
+        if(e.target.value<99){setValue(e.target.value++)}}}
       />
       <button className="knopshethik" onClick={()=>{           
         if(value == 0){return}
@@ -57,8 +58,7 @@ return (
         <input
         type="number"
         value={value}
-        onChange={(e)=>setValue(e.target.value++)}
-        />
+        onChange={(e)=>{if(e.target.value<99){setValue(e.target.value++)}}}/>
         <button className="knopshethik" onClick={()=>{           
           if(value == 0){return}
           setValue(value-1)}}>-</button>
@@ -71,7 +71,7 @@ return (
         class="slider" 
         id="myRange"
         value={value}
-        onChange={(e)=>{setValue(e.target.value++)}}
+        onChange={(e)=>{ if(e.target.value<99){setValue(e.target.value++)}}}
         />
       </div>
       <h2>{`Итого:${suma} рублей`}</h2>

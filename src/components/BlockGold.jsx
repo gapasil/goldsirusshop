@@ -40,33 +40,40 @@ export const BlockGold = ({rezim,callback,props,theme}) => {
     localStorage.removeItem(`x${rezim}`)
     dispatch({type:`x${rezim}`,payload:0})
     callback(Math.random())
-  }
+  } 
 
   let callbackValueGold = (e) =>{
-    if(e.target.value>=6.99 && rezim==2){
+    if(e.target.value > 9999999){
+      return
+    }
+    if(rezim==2){
       let suma = (e.target.value/6.99)*1000;
       setValueGold(Math.floor10(suma, -2));
     }
-    if(e.target.value>=12.99 && rezim==4){
+    if(rezim==4){
       let suma = (e.target.value/12.99)*1000;
       setValueGold(Math.floor10(suma, -2));
     }
-    if(e.target.value>=29.99 && rezim==5){
+    if(rezim==5){
       let suma = (e.target.value/29.99)*1000;
       setValueGold(Math.floor10(suma, -2));
     }
+    
     setValueRub(e.target.value)
   }
   let callbackValueRub = (e) =>{
-    if(e.target.value>=1000 && rezim==2){
+    if(e.target.value > 9999999){
+      return
+    }
+    if(rezim==2){
       let suma = (6.99/1000)*e.target.value;
       setValueRub(Math.floor10(suma, -2));
     }
-    if(e.target.value>=1000 && rezim==4){
+    if(rezim==4){
       let suma = (12.99/1000)*e.target.value;
       setValueRub(Math.floor10(suma, -2));
     }
-    if(e.target.value>=1000 && rezim==5){
+    if(rezim==5){
       let suma = (29.99/1000)*e.target.value;
       setValueRub(Math.floor10(suma, -2));
     }
@@ -104,12 +111,12 @@ export const BlockGold = ({rezim,callback,props,theme}) => {
       <div className="kalk">     
           <div className='continput'>
             <p>Получу</p>
-            <input className={cssgold} value={valueGold} onChange={callbackValueRub} />
+            <input type="number" className={cssgold} value={valueGold} onChange={callbackValueRub} />
           </div>
           <img src={img} width="40px" />
           <div className='continput'>
             <p>Заплачу</p>
-            <input className={cssrub} value={valueRub} onChange={callbackValueGold} />
+            <input type="number" className={cssrub} value={valueRub} onChange={callbackValueGold} />
           </div>      
       </div> 
      </div> 
@@ -122,12 +129,12 @@ export const BlockGold = ({rezim,callback,props,theme}) => {
       <div className="kalk">     
           <div className='continput'>
             <p>Получу</p>
-            <input className={cssgold} value={valueGold} onChange={callbackValueRub} />
+            <input type="number" className={cssgold} value={valueGold} onChange={callbackValueRub} />
           </div>
           <img src={img} width="40px" />
           <div className='continput'>
             <p>Заплачу</p>
-            <input className={cssrub} value={valueRub} onChange={callbackValueGold} />
+            <input type="number" className={cssrub} value={valueRub} onChange={callbackValueGold} />
           </div>      
       </div> 
      </div>
@@ -141,12 +148,12 @@ export const BlockGold = ({rezim,callback,props,theme}) => {
       <div className="kalk">
           <div className='continput'>
             <p>Получу</p>
-            <input className={cssgold} value={valueGold} onChange={callbackValueRub} />
+            <input type="number" className={cssgold} value={valueGold} onChange={callbackValueRub} />
           </div>
           <img src={img} width="40px" />
           <div className='continput'>
             <p>Заплачу</p>
-            <input className={cssrub} value={valueRub} onChange={callbackValueGold} />
+            <input type="number" className={cssrub} value={valueRub} onChange={callbackValueGold} />
           </div>      
       </div> 
      </div>

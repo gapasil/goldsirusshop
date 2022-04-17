@@ -190,12 +190,13 @@ main{
     }
 .fotoputin{
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     height:500px;
     order: 1;
-    background:url(../img/light/putingold.png);
+    background:url(../img/галивикс1.png);
     background-size:100% 100%;
     align-self: flex-end;
+    transform: scale(-1, 1)
 }
 .block_textandknop{
     display: flex;
@@ -701,6 +702,7 @@ footer p {
     width:100%;
     max-width:500px;
     height:600px;
+    text-align: center;
 }
 .noneclass{
     display:none
