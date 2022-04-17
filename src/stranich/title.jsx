@@ -49,6 +49,7 @@ const Title = () => {
   const logoref = useRef(null)
   let koltov = 0
   useEffect(()=>{
+    koltov=0
     for(let key in localStorage){
     if (!localStorage.hasOwnProperty(key)) {
       continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
@@ -68,6 +69,7 @@ const Title = () => {
     ["Добавить в корзину","Древнейший саронит",saronitwhite,"saronit"]
   ])
   let proverktovar = () =>{
+    koltov=0
     for(let key in localStorage){
     if (!localStorage.hasOwnProperty(key)) {
       continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
