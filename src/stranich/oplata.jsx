@@ -93,9 +93,11 @@ const Oplata = () => {
     let proverk = () =>{
       dispatch({type:"table",payload:true})
       if(suma<6.99){
-        setText("Минимальное количество золота к покупке 1000")
+        dispatch({type:"table",payload:false})
+        setText("Минимальное количество золота к покупке 1000")       
       }
       else if(silka == "/oplat"){
+        dispatch({type:"table",payload:false})
         setText("Заполните анкету!")
       }
     }
