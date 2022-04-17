@@ -48,7 +48,8 @@ const Title = () => {
   const komref = useRef(null)
   const logoref = useRef(null)
   let koltov = 0
-  for(let key in localStorage){
+  useEffect(()=>{
+    for(let key in localStorage){
     if (!localStorage.hasOwnProperty(key)) {
       continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
     }
@@ -57,7 +58,9 @@ const Title = () => {
     }
     koltov += 1
   }
-  const [valueKorzina,setValueKroz] = useState(koltov)
+  setValueKroz(koltov)
+  },[])
+  const [valueKorzina,setValueKroz] = useState("")
   const [,settt] = useState('')
   const [masreg,setMasreg] = useState([
     ["Добавить в корзину","Воронка пустоты",voronkawhite,"voronka"],

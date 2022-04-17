@@ -192,11 +192,9 @@ main{
     width: 100%;
     max-width: 700px;
     height:500px;
-    order: 1;
     background:url(../img/галивикс1.png);
     background-size:100% 100%;
     align-self: flex-end;
-    transform: scale(-1, 1)
 }
 .block_textandknop{
     display: flex;
