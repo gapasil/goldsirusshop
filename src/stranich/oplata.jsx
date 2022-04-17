@@ -205,7 +205,7 @@ const Oplata = () => {
                   }
                   })}
                   <div className={clas}>
-                    <h2>{`Итого: ${suma} рублей`}</h2>
+                    <h2 style={{"color":"teal"}}>{`Итого: ${suma} рублей`}</h2>
                     <Link to={silka} className="knopgreen" onClick={proverk}>Купить</Link>
                     <h2 style={{"color":"red"}}>{tetxt}</h2>
                     <Svaz callback={proverka}/>  
