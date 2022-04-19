@@ -9,7 +9,8 @@
     text-align: center;
 }
 .blocksvaz textarea{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height:200px;
     border: 2px solid grey;
     border-radius: 1px;

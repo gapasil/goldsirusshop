@@ -42,12 +42,19 @@ const Title = () => {
   }
   else{maskartinki = [dostavkaimgblack,anonimgblack,cenaimgblack,optimgblack,krugimgblack,edtovimgblack,karzinablack,sirusblack,vkwhite,tgwhite]}
   const [img,setImg] = useState(maskartinki)
+  const [clas, setClas] = useState("linkimgkartinkaburgertitle")
   const goldref = useRef(null);
   const regref = useRef(null)
   const infref = useRef(null)
   const komref = useRef(null)
   const logoref = useRef(null)
   let koltov = 0
+  useEffect(()=>{
+    if(localStorage.getItem("theme","dark")){
+      return
+    }
+    else localStorage.setItem("theme","light")
+  },[])
   useEffect(()=>{
     koltov=0
     for(let key in localStorage){
@@ -143,8 +150,14 @@ const Title = () => {
           </div>
           <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
+            <label class="menu__btn" for="menu__toggle" onClick={()=>{
+              if(clas!="noneclass"){
+                setClas("noneclass")
+              }
+              else{setClas("linkimgkartinkaburgertitle")}
+            }}>           
               <span></span>
+              <div id={clas}><p>{valueKorzina}</p></div>
             </label>
            <ul class="menu__box">
               <Link to="/oplat" id="linkimgkartinkaburger"><p>{valueKorzina}</p><img src={img[6]} height="40px"/></Link>

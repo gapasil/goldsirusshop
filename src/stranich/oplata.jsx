@@ -32,6 +32,7 @@ const Oplata = () => {
     let [silka,setSilka] = useState("/oplat")
     let [tetxt,setText] = useState("")
     let clas
+    
     if(localStorage.length >= 2){
       clas = "knopAndSum"
     }
@@ -202,7 +203,7 @@ const Oplata = () => {
                   )}}
                   else{
                     return(
-                      <h2 style={{"paddingTop":"100px"}}>Сдесь будут ваши товары</h2>
+                      <h2 style={{"paddingTop":"100px","color":"teal"}}>Сдесь будут ваши товары</h2>
                     )                   
                   }
                   })}
